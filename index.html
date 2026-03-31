@@ -1,0 +1,1118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en" class="h-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space"> </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;The Freight Calculator — Instant Container Quotes&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com/3.4.17"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="/_sdk/element_sdk.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="/_sdk/data_sdk.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&amp;amp;family=Quicksand:wght@400;500;600;700&amp;amp;family=Outfit:wght@400;500;600;700;800&amp;amp;family=Cooperation:wght@700&amp;amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html, body { height: 100%; margin: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: 'Quicksand', sans-serif; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.font-display { font-family: 'Outfit', sans-serif; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo-text { font-family: 'Comfortaa', sans-serif; font-weight: 700; letter-spacing: -0.5px; font-size: clamp(18px, 5vw, 24px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.app-root { height: 100%; overflow-y: auto; overflow-x: hidden; width: 100%; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-in { animation: fadeIn 0.7s ease both; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-in-delay-1 { animation-delay: 0.15s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-in-delay-2 { animation-delay: 0.3s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-in-delay-3 { animation-delay: 0.45s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fade-in-delay-4 { animation-delay: 0.6s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.float-anim { animation: float 4s ease-in-out infinite; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes phoneScroll { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.phone-scroll { animation: phoneScroll 6s ease-in-out infinite; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes logoSlide { from { transform: translateX(0); } to { transform: translateX(-50%); } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo-carousel { animation: logoSlide 12s linear infinite; will-change: transform; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo-carousel:hover { animation-play-state: paused; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-pattern {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.glass-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.07);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.13);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary { transition: all 0.25s ease; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(234,88,12,0.35); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary { transition: all 0.25s ease; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary:hover { transform: translateY(-2px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-hidden { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-visible { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.table-container { overflow-x: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toast-msg {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 20px; border-radius: 8px; font-weight: 600; z-index: 999;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0; transition: opacity 0.4s ease; pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(12px, 3vw, 14px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 90vw;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toast-msg.show { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input:focus, select:focus, textarea:focus {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>outline: none; box-shadow: 0 0 0 3px rgba(234,88,12,0.25);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.confirm-delete-row { background: #fef2f2 !important; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Mobile optimizations */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 640px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body { font-size: 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.logo-text { font-size: 18px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1 { font-size: clamp(24px, 6vw, 40px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h2 { font-size: clamp(20px, 5.5vw, 32px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h3 { font-size: clamp(16px, 4.5vw, 20px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>p { font-size: clamp(14px, 3.5vw, 16px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.btn-primary, .btn-secondary { padding: 12px 20px; font-size: 13px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.grid { gap: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.space-y-4 &gt; * + * { margin-top: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.px-5 { padding-left: 16px; padding-right: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>table { font-size: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>table th, table td { padding: 8px 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero-pattern { background-size: 100%; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 480px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.logo-text { font-size: 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1 { font-size: 22px; line-height: 1.2; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h2 { font-size: 18px; line-height: 1.2; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.btn-primary, .btn-secondary { padding: 10px 16px; font-size: 12px; width: 100%; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.flex.flex-wrap.gap-4 { flex-direction: column; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.px-5 { padding-left: 12px; padding-right: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.float-anim { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.nav-links { flex-direction: column; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>table { font-size: 11px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>input, select, textarea { font-size: 16px; padding: 10px 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>brand: { 50:'#fff7ed', 100:'#ffedd5', 200:'#fed7aa', 300:'#fdba74', 400:'#fb923c', 500:'#f97316', 600:'#ea580c', 700:'#c2410c', 800:'#9a3412', 900:'#7c2d12' }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;body { box-sizing: border-box; }&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space"> </span>&lt;/head&gt;</p>
+<p class="p1"><span class="Apple-converted-space"> </span>&lt;body class="h-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="app-root" id="appRoot"&gt;&lt;!-- ============ TOAST ============ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;div id="toastMsg" class="toast-msg bg-brand-600 text-white"&gt;&lt;/div&gt;&lt;!-- ============ NAVBAR ============ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;nav id="mainNav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background:transparent;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4"&gt;&lt;a href="#" onclick="navigateTo('home');return false;" class="flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center"&gt;&lt;i data-lucide="container" class="w-5 h-5 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;&lt;span class="logo-text text-xl tracking-tighter" id="navLogo" style="color:#fff;"&gt;The Freight&lt;span class="text-brand-400"&gt; Calculator&lt;/span&gt;&lt;/span&gt; &lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="hidden md:flex items-center gap-8"&gt;&lt;a href="#services-section" class="text-sm font-medium hover:text-brand-400 transition" id="navLink1" style="color:rgba(255,255,255,0.85);"&gt;Services&lt;/a&gt; &lt;a href="#" onclick="navigateTo('calculator');return false;" class="text-sm font-medium hover:text-brand-400 transition" id="navLink2" style="color:rgba(255,255,255,0.85);"&gt;Freight Calculator&lt;/a&gt; &lt;button onclick="navigateTo('demo')" class="btn-primary bg-white text-brand-700 font-semibold px-5 py-2 rounded-lg text-sm transition hover:bg-gray-50"&gt;Book a Demo&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;&lt;button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg" onclick="toggleMobileMenu()"&gt; &lt;i data-lucide="menu" class="w-6 h-6" id="menuIcon" style="color:#fff;"&gt;&lt;/i&gt; &lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;&lt;!-- Mobile Menu --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="mobileMenu" class="md:hidden hidden px-5 pb-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="glass-card rounded-xl p-4 flex flex-col gap-3"&gt;&lt;a href="#services-section" class="text-white text-sm font-medium py-2 px-3 rounded-lg hover:bg-white/10 transition"&gt;Services&lt;/a&gt; &lt;a href="#" onclick="navigateTo('calculator');return false;" class="text-white text-sm font-medium py-2 px-3 rounded-lg hover:bg-white/10 transition"&gt;Freight Calculator&lt;/a&gt; &lt;a href="mailto:containerprices.com@domainsbyproxy.com" class="text-white text-sm font-medium py-2 px-3 rounded-lg hover:bg-white/10 transition"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;/nav&gt;&lt;!-- ======================== HOME PAGE ======================== --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;div id="page-home" class="page-visible"&gt;&lt;!-- HERO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="hero-pattern relative overflow-hidden" id="heroSection" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 50%, #9a3412 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto px-5 pt-28 pb-20 md:pt-36 md:pb-28 relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid md:grid-cols-2 gap-12 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="fade-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-white text-xs font-semibold mb-6 tracking-wide uppercase"&gt;&lt;i data-lucide="globe" class="w-3.5 h-3.5"&gt;&lt;/i&gt; Global Freight Solutions</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="fade-in fade-in-delay-1 font-display font-800 text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5" id="heroTitle"&gt;Seamless Container Shipping, Worldwide&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="fade-in fade-in-delay-2 text-white/80 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 max-w-lg" id="heroSubtitle"&gt;Expert freight forwarding and supply chain management. Get instant quotes for deep-sea, road, and air transport.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="fade-in fade-in-delay-3 flex flex-wrap gap-4"&gt;&lt;button onclick="navigateTo('calculator')" class="btn-primary bg-white text-brand-700 font-bold px-7 py-3.5 rounded-xl text-sm flex items-center gap-2"&gt; &lt;i data-lucide="calculator" class="w-4 h-4"&gt;&lt;/i&gt; Freight Calculator &lt;/button&gt; &lt;a href="mailto:pr@sea-and-shore.com" class="btn-secondary glass-card text-white font-semibold px-7 py-3.5 rounded-xl text-sm flex items-center gap-2"&gt; &lt;i data-lucide="mail" class="w-4 h-4"&gt;&lt;/i&gt; Get in Touch &lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="fade-in fade-in-delay-4 flex justify-center md:justify-center gap-6"&gt;&lt;!-- Phone 1: Tracking --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="relative float-anim" style="animation-delay: 0s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="w-40 h-[320px] rounded-[1.8rem] border-4 border-white/20 bg-gray-900 p-2 shadow-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="w-full h-full rounded-[1.5rem] overflow-hidden" style="background: linear-gradient(180deg, #ea580c 0%, #f97316 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;div class="p-3 pt-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center justify-between mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-white font-display font-700 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Track Shipment</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;&lt;i data-lucide="package" class="w-3.5 h-3.5 text-white/60"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white/20 rounded-xl p-2.5 mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-white/70 text-[9px] mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Order #SH-2025-0847</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-white font-bold text-[10px] mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Shanghai → Rotterdam</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="w-full bg-white/20 rounded-full h-1.5 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="bg-white h-full rounded-full" style="width: 65%;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-white/60 text-[8px] mt-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>65% in transit</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/50 text-[8px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Current</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Suez Canal</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/50 text-[8px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Next</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Port Said</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;&lt;!-- Phone 2: Calculator --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="relative float-anim" style="animation-delay: 0.2s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="w-40 h-[320px] rounded-[1.8rem] border-4 border-white/20 bg-gray-900 p-2 shadow-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="w-full h-full rounded-[1.5rem] overflow-hidden" style="background: linear-gradient(180deg, #ea580c 0%, #f97316 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;div class="p-3 pt-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center justify-between mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-white font-display font-700 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Quote Calculator</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;&lt;i data-lucide="calculator" class="w-3.5 h-3.5 text-white/60"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/50 text-[8px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>From</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Shanghai</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/50 text-[8px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>To</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Rotterdam</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="grid grid-cols-2 gap-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="bg-white/15 rounded-lg p-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white/50 text-[7px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Type</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white text-[9px] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>40ft Dry</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="bg-white/15 rounded-lg p-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white/50 text-[7px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Qty</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white text-[9px] font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>2</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-2 bg-white rounded-lg p-2 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-brand-600 font-display font-700 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>$4,250</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;&lt;!-- Phone 3: Bookings --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="relative float-anim" style="animation-delay: 0.4s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="w-40 h-[320px] rounded-[1.8rem] border-4 border-white/20 bg-gray-900 p-2 shadow-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="w-full h-full rounded-[1.5rem] overflow-hidden" style="background: linear-gradient(180deg, #ea580c 0%, #f97316 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;div class="p-3 pt-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center justify-between mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-white font-display font-700 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>My Bookings</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;&lt;i data-lucide="list" class="w-3.5 h-3.5 text-white/60"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/20 rounded-lg p-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-semibold mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>SH-0847</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/70 text-[8px] mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Shanghai → Rotterdam</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="inline-block px-1.5 py-0.5 rounded text-[7px] font-bold bg-green-500/30 text-green-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>In Transit</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/20 rounded-lg p-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-semibold mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>TH-0621</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/70 text-[8px] mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Bangkok → Singapore</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="inline-block px-1.5 py-0.5 rounded text-[7px] font-bold bg-blue-500/30 text-blue-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Booked</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/20 rounded-lg p-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-[9px] font-semibold mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>DU-0534</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/70 text-[8px] mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Dubai → Hamburg</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="inline-block px-1.5 py-0.5 rounded text-[7px] font-bold bg-yellow-500/30 text-yellow-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Pending</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;&lt;!-- Stats Row --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fade-in fade-in-delay-4 grid grid-cols-2 md:grid-cols-4 gap-4 mt-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="globe" class="w-6 h-6 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-800 text-3xl text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>150+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-white/70 text-xs mt-2 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>Trade Routes</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="box" class="w-6 h-6 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-800 text-3xl text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>50k+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-white/70 text-xs mt-2 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>TEUs Managed</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="check-circle" class="w-6 h-6 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-800 text-3xl text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>98%</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-white/70 text-xs mt-2 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>On-Time Delivery</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="glass-card rounded-2xl p-6 text-center group hover:bg-white/15 transition duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="headphones" class="w-6 h-6 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="font-display font-800 text-3xl text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>24/7</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-white/70 text-xs mt-2 font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>Support</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;&lt;!-- Wave divider --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;svg viewbox="0 0 1200 120" preserveaspectratio="none" class="w-full h-16 md:h-24" fill="#ffffff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;&lt;!-- SERVICES --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="services-section" class="py-20 md:py-28 px-5" style="background:#ffffff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="text-center mb-14"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 text-brand-600 text-xs font-bold mb-4 tracking-wide uppercase"&gt;&lt;i data-lucide="layers" class="w-3.5 h-3.5"&gt;&lt;/i&gt; What We Do</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;h2 class="font-display font-800 text-3xl md:text-4xl mb-3" id="servicesTitle" style="color:#1a1a1a;"&gt;Our Services&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;p class="text-gray-500 max-w-xl mx-auto" id="servicesSubText"&gt;End-to-end supply chain solutions tailored to your cargo needs.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="servicesGrid"&gt;&lt;!-- Deep Sea --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="service-card rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5"&gt;&lt;i data-lucide="ship" class="w-6 h-6 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-display font-700 text-lg mb-2" style="color:#1a1a1a;"&gt;Deep-Sea Freight&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-500 text-sm leading-relaxed"&gt;FCL and LCL container shipping across all major trade lanes. Competitive rates on 20ft and 40ft containers.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;!-- Road --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="service-card rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5"&gt;&lt;i data-lucide="truck" class="w-6 h-6 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-display font-700 text-lg mb-2" style="color:#1a1a1a;"&gt;Road Transport&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-500 text-sm leading-relaxed"&gt;Door-to-door trucking and haulage services connecting ports, warehouses, and final destinations.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;!-- Air --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="service-card rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5"&gt;&lt;i data-lucide="plane" class="w-6 h-6 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-display font-700 text-lg mb-2" style="color:#1a1a1a;"&gt;Air Freight&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-500 text-sm leading-relaxed"&gt;Express and standard airfreight for time-critical shipments with full customs support.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;!-- Warehousing --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="service-card rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5"&gt;&lt;i data-lucide="warehouse" class="w-6 h-6 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 class="font-display font-700 text-lg mb-2" style="color:#1a1a1a;"&gt;Warehousing&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-500 text-sm leading-relaxed"&gt;Secure storage, inventory management, and distribution services at strategic locations.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;&lt;!-- APP SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="app-section" class="py-20 md:py-28 px-5" style="background:#fafafa;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid md:grid-cols-2 gap-14 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 text-brand-600 text-xs font-bold mb-4 tracking-wide uppercase"&gt;&lt;i data-lucide="smartphone" class="w-3.5 h-3.5"&gt;&lt;/i&gt; Mobile App</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="font-display font-800 text-3xl md:text-4xl mb-4" id="appTitle" style="color:#1a1a1a;"&gt;Book Containers From Your Phone&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-500 text-lg leading-relaxed mb-6" id="appDescription"&gt;Our mobile freight calculator lets you get instant quotes, compare rates for 20ft and 40ft containers, and book shipments — all from your smartphone. Track your cargo in real time and manage your supply chain on the go.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="space-y-3 mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;li class="flex items-center gap-3 text-gray-600 text-sm"&gt;&lt;span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center"&gt;&lt;i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"&gt;&lt;/i&gt;&lt;/span&gt; Instant freight quotes for dry &amp;amp; reefer containers&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;li class="flex items-center gap-3 text-gray-600 text-sm"&gt;&lt;span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center"&gt;&lt;i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"&gt;&lt;/i&gt;&lt;/span&gt; Book and manage shipments anywhere&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;li class="flex items-center gap-3 text-gray-600 text-sm"&gt;&lt;span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center"&gt;&lt;i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"&gt;&lt;/i&gt;&lt;/span&gt; Real-time cargo tracking&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;li class="flex items-center gap-3 text-gray-600 text-sm"&gt;&lt;span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center"&gt;&lt;i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"&gt;&lt;/i&gt;&lt;/span&gt; Document upload &amp;amp; customs support&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-wrap gap-3"&gt;&lt;button onclick="navigateTo('demo')" class="btn-primary bg-brand-600 text-white font-bold px-6 py-3 rounded-xl text-sm flex items-center gap-2"&gt; &lt;i data-lucide="calendar" class="w-4 h-4"&gt;&lt;/i&gt; Book a Demo &lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="relative phone-scroll"&gt;&lt;!-- Phone mockup --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="w-56 h-[420px] rounded-[2.5rem] border-4 border-gray-800 bg-gray-900 p-2 shadow-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="w-full h-full rounded-[2rem] overflow-hidden" style="background: linear-gradient(180deg, #ea580c 0%, #f97316 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;div class="p-5 pt-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4"&gt;&lt;i data-lucide="container" class="w-5 h-5 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-white font-display font-700 text-sm mb-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>Freight Calculator</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-white/60 text-xs mb-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>Get instant quotes</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-2.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/50 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Origin</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-xs font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Shanghai, CN</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-2.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white/50 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Destination</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="text-white text-xs font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>Rotterdam, NL</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="bg-white/15 rounded-lg p-2.5 flex justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white/50 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Container</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white text-xs font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>40ft Dry</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white/50 text-[10px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Qty</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;div class="text-white text-xs font-medium"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>2</p>
+<p class="p1"><span class="Apple-converted-space">               </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-4 bg-white rounded-xl p-3 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="text-brand-600 font-display font-800 text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Get Quote</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">           </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="absolute -bottom-4 -right-4 w-20 h-20 bg-brand-100 rounded-full -z-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="absolute -top-4 -left-4 w-14 h-14 bg-brand-200 rounded-full -z-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;&lt;!-- TESTIMONIALS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-20 md:py-28 px-5" style="background:#ffffff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="text-center mb-14"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 text-brand-600 text-xs font-bold mb-4 tracking-wide uppercase"&gt;&lt;i data-lucide="star" class="w-3.5 h-3.5"&gt;&lt;/i&gt; Trusted by Industry Leaders</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;h2 class="font-display font-800 text-3xl md:text-4xl mb-3" style="color:#1a1a1a;"&gt;What Our Clients Say&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;p class="text-gray-500 max-w-xl mx-auto"&gt;Leading Dutch logistics companies rely on ContainerPrices for transparent pricing and reliable service.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;!-- Testimonial 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center gap-1 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-600 text-sm leading-relaxed mb-4"&gt;"ContainerPrices transformed how we manage freight. The calculator gives us instant quotes, and their team's expertise is unmatched. Highly recommended for any logistics operation."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="border-t border-gray-100 pt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="font-semibold text-gray-800 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Marco</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="text-gray-400 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Logistics • Amsterdam</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;!-- Testimonial 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center gap-1 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-600 text-sm leading-relaxed mb-4"&gt;"Working with ContainerPrices has streamlined our entire supply chain. They handle complex routes with ease and always deliver on time. They're true partners in our growth."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="border-t border-gray-100 pt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="font-semibold text-gray-800 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Petra</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="text-gray-400 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Supply Chain • Rotterdam</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;!-- Testimonial 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="rounded-2xl p-6 border border-gray-100" style="background:#fff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center gap-1 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt; &lt;i data-lucide="star" class="w-4 h-4 text-brand-500" style="fill:currentColor;"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-600 text-sm leading-relaxed mb-4"&gt;"Their 24/7 support and real-time tracking give us complete visibility into our shipments. Cost-effective and professional — exactly what we needed to scale our business."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="border-t border-gray-100 pt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="font-semibold text-gray-800 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Hans</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="text-gray-400 text-xs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Export • Utrecht</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;&lt;!-- LOGO CAROUSEL --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-16 md:py-20 px-5" style="background:#ffffff;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-center text-gray-400 text-xs font-semibold mb-10 uppercase tracking-wide"&gt;Trusted by leading companies&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="logo-carousel flex items-center justify-center gap-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>MAERSK</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>HAPAG</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>COSCO</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>EVERGREEN</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>CMA CGM</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>MSC</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>OOCL</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>SEATRADE</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>MAERSK</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>HAPAG</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>COSCO</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>EVERGREEN</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>CMA CGM</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>MSC</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>OOCL</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex-shrink-0 text-gray-400 font-bold text-lg tracking-wide whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>SEATRADE</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;&lt;!-- CTA --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-20 md:py-24 px-5" id="ctaSection" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-3xl mx-auto text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="font-display font-800 text-3xl md:text-4xl text-white mb-4" id="ctaTitle"&gt;Ready to Ship?&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-white/80 text-lg mb-8"&gt;Get a free freight quote in minutes. Our experts are standing by to help with your supply chain needs.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex flex-wrap justify-center gap-4"&gt;&lt;button onclick="navigateTo('calculator')" class="btn-primary bg-white text-brand-700 font-bold px-8 py-4 rounded-xl text-sm flex items-center gap-2"&gt; &lt;i data-lucide="calculator" class="w-4 h-4"&gt;&lt;/i&gt; Open Freight Calculator &lt;/button&gt; &lt;a href="mailto:containerprices.com@domainsbyproxy.com" class="btn-secondary glass-card text-white font-semibold px-8 py-4 rounded-xl text-sm flex items-center gap-2"&gt; &lt;i data-lucide="mail" class="w-4 h-4"&gt;&lt;/i&gt; Contact us today &lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;&lt;!-- FOOTER --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="py-10 px-5" style="background:#1a1a1a;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="w-7 h-7 rounded-md bg-brand-600 flex items-center justify-center"&gt;&lt;i data-lucide="container" class="w-4 h-4 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;span class="font-display font-700 text-sm text-white"&gt;The Freight&lt;span class="text-brand-400"&gt; Calculator&lt;/span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-gray-500 text-xs" id="footerText"&gt;© 2025 The Freight Calculator. All rights reserved.&lt;/p&gt;&lt;a href="mailto:containerprices.com@domainsbyproxy.com" class="text-brand-400 text-xs font-medium hover:underline"&gt;Contact us today&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;/div&gt;&lt;!-- ======================== DEMO BOOKING PAGE ======================== --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;div id="page-demo" class="page-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="w-full px-5 py-4 flex items-center gap-3 border-b border-gray-100" style="background:#fff; padding-top: 20px;"&gt;&lt;button onclick="navigateTo('home')" class="flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition"&gt; &lt;i data-lucide="arrow-left" class="w-4 h-4"&gt;&lt;/i&gt; Back to Home &lt;/button&gt; &lt;span class="text-gray-300"&gt;|&lt;/span&gt; &lt;span class="font-display font-700 text-gray-800"&gt;Book a Demo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="min-h-full flex items-center justify-center px-5 py-10" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="w-full max-w-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="rounded-2xl p-8" style="background:#fff; box-shadow: 0 20px 60px rgba(0,0,0,0.2);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="flex items-center gap-3 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center"&gt;&lt;i data-lucide="calendar" class="w-5 h-5 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="font-display font-700 text-xl" style="color:#1a1a1a;"&gt;Book a Demo&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;p class="text-gray-500 text-sm mb-6"&gt;Schedule a personalized demo of our freight calculator and mobile app with our team.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;form id="demoForm" onsubmit="handleDemoSubmit(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div&gt;&lt;label for="demo_name" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Full Name *&lt;/label&gt; &lt;input id="demo_name" type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div&gt;&lt;label for="demo_email" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Email *&lt;/label&gt; &lt;input id="demo_email" type="email" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div&gt;&lt;label for="demo_phone" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Phone *&lt;/label&gt; &lt;input id="demo_phone" type="tel" required placeholder="+31 6 12345678" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div&gt;&lt;label for="demo_company" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Company&lt;/label&gt; &lt;input id="demo_company" type="text" placeholder="Your Company Inc." class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div&gt;&lt;label for="demo_interest" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;What interests you? *&lt;/label&gt; &lt;select id="demo_interest" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt; &lt;option value=""&gt;Select an option&lt;/option&gt; &lt;option value="Application"&gt;Application&lt;/option&gt; &lt;option value="Freight Forwarding"&gt;Freight Forwarding&lt;/option&gt; &lt;option value="Partnership"&gt;Partnership&lt;/option&gt; &lt;option value="Something Else"&gt;Something Else&lt;/option&gt; &lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;div&gt;&lt;label for="demo_message" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Additional Details&lt;/label&gt; &lt;textarea id="demo_message" rows="3" placeholder="Tell us a bit about your shipping needs..." class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition resize-none"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;&lt;button type="submit" id="demoBtnSubmit" class="w-full mt-6 btn-primary bg-brand-600 text-white font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2"&gt; &lt;i data-lucide="send" class="w-4 h-4"&gt;&lt;/i&gt; &lt;span id="demoBtnText"&gt;Request Demo&lt;/span&gt; &lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;p class="text-gray-400 text-xs text-center mt-4"&gt;We'll get back to you within 24 hours to confirm your demo time.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;/div&gt;&lt;!-- ======================== CALCULATOR PAGE ======================== --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;div id="page-calculator" class="page-hidden"&gt;&lt;!-- Calc Nav --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="w-full px-5 py-4 flex items-center gap-3 border-b border-gray-100" style="background:#fff; padding-top: 20px;"&gt;&lt;button onclick="navigateTo('home')" class="flex items-center gap-2 text-brand-600 font-semibold text-sm hover:text-brand-700 transition"&gt; &lt;i data-lucide="arrow-left" class="w-4 h-4"&gt;&lt;/i&gt; Back to Home &lt;/button&gt; &lt;span class="text-gray-300"&gt;|&lt;/span&gt; &lt;span class="font-display font-700 text-gray-800"&gt;Freight Calculator&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 50%, #9a3412 100%);" class="py-16 px-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 class="font-display font-800 text-4xl md:text-5xl text-white mb-4"&gt;Instant Freight Quotes&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-white/80 text-lg max-w-2xl mx-auto"&gt;Get accurate, competitive pricing for your container shipments in seconds. No hidden fees, no surprises — just transparent rates from port to port.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto px-5 py-10"&gt;&lt;!-- Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="rounded-2xl border border-gray-100 p-6 md:p-8 mb-10" style="background:#fff; box-shadow: 0 4px 24px rgba(0,0,0,0.04);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center gap-3 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center"&gt;&lt;i data-lucide="calculator" class="w-5 h-5 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="font-display font-700 text-xl" style="color:#1a1a1a;"&gt;Request a Quote&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-400 text-xs"&gt;Fill in your shipment details and we'll get back to you.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;form id="freightForm" onsubmit="handleFormSubmit(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_name" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Full Name *&lt;/label&gt; &lt;input id="f_name" type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_email" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Email *&lt;/label&gt; &lt;input id="f_email" type="email" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_phone" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Phone&lt;/label&gt; &lt;input id="f_phone" type="tel" placeholder="+31 6 12345678" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_origin" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Origin Port / City *&lt;/label&gt; &lt;input id="f_origin" type="text" required placeholder="Shanghai, China" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_destination" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Destination Port / City *&lt;/label&gt; &lt;input id="f_destination" type="text" required placeholder="Rotterdam, Netherlands" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_qty" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Quantity *&lt;/label&gt; &lt;input id="f_qty" type="number" min="1" required placeholder="1" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_size" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Container Size *&lt;/label&gt; &lt;select id="f_size" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt; &lt;option value=""&gt;Select size&lt;/option&gt; &lt;option value="20ft"&gt;20ft&lt;/option&gt; &lt;option value="40ft"&gt;40ft&lt;/option&gt; &lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;&lt;label for="f_type" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Container Type *&lt;/label&gt; &lt;select id="f_type" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition"&gt; &lt;option value=""&gt;Select type&lt;/option&gt; &lt;option value="Dry"&gt;Dry&lt;/option&gt; &lt;option value="Reefer"&gt;Reefer&lt;/option&gt; &lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sm:col-span-2 lg:col-span-1"&gt;&lt;label for="f_cargo" class="block text-xs font-semibold text-gray-600 mb-1.5"&gt;Cargo Description&lt;/label&gt; &lt;textarea id="f_cargo" rows="1" placeholder="Brief description of goods..." class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-gray-50 focus:bg-white transition resize-none"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="mt-6 flex items-center gap-4"&gt;&lt;button type="submit" id="submitBtn" class="btn-primary bg-brand-600 text-white font-bold px-8 py-3.5 rounded-xl text-sm flex items-center gap-2"&gt; &lt;i data-lucide="send" class="w-4 h-4"&gt;&lt;/i&gt; &lt;span id="submitBtnText"&gt;Submit Request&lt;/span&gt; &lt;/button&gt; &lt;span id="formLoading" class="hidden text-brand-600 text-sm font-medium"&gt;Saving...&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;&lt;!-- Submissions table --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="rounded-2xl border border-gray-100 p-6 md:p-8" style="background:#fff; box-shadow: 0 4px 24px rgba(0,0,0,0.04);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center justify-between mb-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center"&gt;&lt;i data-lucide="table" class="w-5 h-5 text-brand-600"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;h2 class="font-display font-700 text-xl" style="color:#1a1a1a;"&gt;Your Requests&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;p class="text-gray-400 text-xs"&gt;All submitted freight quotes appear here.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;&lt;span id="recordCount" class="text-xs font-semibold text-gray-400 bg-gray-50 px-3 py-1 rounded-full"&gt;0 requests&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="emptyState" class="text-center py-14"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;div class="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center mx-auto mb-4"&gt;&lt;i data-lucide="inbox" class="w-7 h-7 text-gray-300"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;p class="text-gray-400 text-sm font-medium"&gt;No quote requests yet.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;p class="text-gray-300 text-xs mt-1"&gt;Submit the form above to get started.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="tableWrapper" class="hidden table-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;table class="w-full text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;tr class="border-b border-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-left py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;Name&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-left py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;Route&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-left py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;Container&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-left py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;Qty&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-left py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;Status&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-left py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;Date&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="text-right py-3 px-3 text-xs font-bold text-gray-400 uppercase tracking-wider"&gt;&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">         </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody id="tableBody"&gt;&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="limitWarning" class="hidden mt-4 p-3 rounded-xl bg-yellow-50 border border-yellow-200 text-yellow-700 text-xs font-semibold text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>⚠️ Maximum of 999 requests reached. Please delete some entries to add new ones.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;&lt;!-- Calc Footer --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="py-8 px-5" style="background:#1a1a1a;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;div class="max-w-7xl mx-auto text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="text-gray-500 text-xs" id="footerTextCalc"&gt;© 2025 The Freight Calculator. All rights reserved.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">     </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== CONFIG &amp; DEFAULTS ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const defaultConfig = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background_color: '#ea580c',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>surface_color: '#ffffff',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text_color: '#1a1a1a',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>primary_action_color: '#ea580c',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>secondary_action_color: '#c2410c',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font_family: 'Quicksand',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font_size: 16,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>hero_title: 'Seamless Container Shipping, Worldwide',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>hero_subtitle: 'Expert freight forwarding and supply chain management. Get instant quotes for deep-sea, road, and air transport.',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>services_title: 'Our Services',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>app_title: 'Book Containers From Your Phone',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>app_description: 'Our mobile freight calculator lets you get instant quotes, compare rates for 20ft and 40ft containers, and book shipments — all from your smartphone. Track your cargo in real time and manage your supply chain on the go.',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cta_title: 'Ready to Ship?',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>footer_text: '© 2025 The Freight Calculator. All rights reserved.'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== DATA SDK ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let allRecords = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dataHandler = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>onDataChanged(data) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>allRecords = data;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderTable(data);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>(async () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const r = await window.dataSdk.init(dataHandler);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!r.isOk) console.error('Data SDK init failed');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>})();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== ELEMENT SDK ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function applyConfig(cfg) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const c = { ...defaultConfig, ...cfg };</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const font = c.font_family || defaultConfig.font_family;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const baseFontStack = 'Quicksand, sans-serif';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const displayFontStack = 'Outfit, sans-serif';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const customStack = `${font}, ${baseFontStack}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const baseSize = c.font_size || defaultConfig.font_size;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.style.fontFamily = customStack;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Hero</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const heroSection = document.getElementById('heroSection');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (heroSection) heroSection.style.background = `linear-gradient(135deg, ${c.background_color} 0%, ${c.secondary_action_color} 50%, ${darkenColor(c.secondary_action_color, 20)} 100%)`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const heroTitle = document.getElementById('heroTitle');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (heroTitle) { heroTitle.textContent = c.hero_title; heroTitle.style.fontSize = `${baseSize * 2.8}px`; heroTitle.style.fontFamily = `${font}, ${displayFontStack}`; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const heroSub = document.getElementById('heroSubtitle');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (heroSub) { heroSub.textContent = c.hero_subtitle; heroSub.style.fontSize = `${baseSize * 1.15}px`; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Services</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const st = document.getElementById('servicesTitle');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (st) { st.textContent = c.services_title; st.style.color = c.text_color; st.style.fontSize = `${baseSize * 2}px`; st.style.fontFamily = `${font}, ${displayFontStack}`; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// App</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const at = document.getElementById('appTitle');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (at) { at.textContent = c.app_title; at.style.color = c.text_color; at.style.fontSize = `${baseSize * 2}px`; at.style.fontFamily = `${font}, ${displayFontStack}`; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ad = document.getElementById('appDescription');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (ad) { ad.textContent = c.app_description; ad.style.fontSize = `${baseSize}px`; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// CTA</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ctaSection = document.getElementById('ctaSection');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (ctaSection) ctaSection.style.background = `linear-gradient(135deg, ${c.primary_action_color} 0%, ${c.secondary_action_color} 100%)`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ct = document.getElementById('ctaTitle');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (ct) { ct.textContent = c.cta_title; ct.style.fontSize = `${baseSize * 2}px`; ct.style.fontFamily = `${font}, ${displayFontStack}`; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Footer</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ft = document.getElementById('footerText');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (ft) ft.textContent = c.footer_text;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const ftc = document.getElementById('footerTextCalc');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (ftc) ftc.textContent = c.footer_text;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Surface color on service cards</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.service-card').forEach(card =&gt; { card.style.background = c.surface_color; });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.service-card h3').forEach(h =&gt; { h.style.color = c.text_color; });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function darkenColor(hex, pct) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>hex = hex.replace('#', '');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let r = parseInt(hex.substr(0,2),16), g = parseInt(hex.substr(2,2),16), b = parseInt(hex.substr(4,2),16);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>r = Math.max(0, Math.floor(r * (1 - pct/100)));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>g = Math.max(0, Math.floor(g * (1 - pct/100)));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>b = Math.max(0, Math.floor(b * (1 - pct/100)));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.elementSdk.init({</p>
+<p class="p1"><span class="Apple-converted-space">      </span>defaultConfig,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>onConfigChange: async (cfg) =&gt; { applyConfig(cfg); },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>mapToCapabilities: (cfg) =&gt; ({</p>
+<p class="p1"><span class="Apple-converted-space">        </span>recolorables: [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ get: () =&gt; cfg.background_color || defaultConfig.background_color, set: (v) =&gt; { cfg.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ get: () =&gt; cfg.surface_color || defaultConfig.surface_color, set: (v) =&gt; { cfg.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ get: () =&gt; cfg.text_color || defaultConfig.text_color, set: (v) =&gt; { cfg.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ get: () =&gt; cfg.primary_action_color || defaultConfig.primary_action_color, set: (v) =&gt; { cfg.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{ get: () =&gt; cfg.secondary_action_color || defaultConfig.secondary_action_color, set: (v) =&gt; { cfg.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>borderables: [],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>fontEditable: { get: () =&gt; cfg.font_family || defaultConfig.font_family, set: (v) =&gt; { cfg.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>fontSizeable: { get: () =&gt; cfg.font_size || defaultConfig.font_size, set: (v) =&gt; { cfg.font_size = v; window.elementSdk.setConfig({ font_size: v }); } },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}),</p>
+<p class="p1"><span class="Apple-converted-space">      </span>mapToEditPanelValues: (cfg) =&gt; new Map([</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['hero_title', cfg.hero_title || defaultConfig.hero_title],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['hero_subtitle', cfg.hero_subtitle || defaultConfig.hero_subtitle],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['services_title', cfg.services_title || defaultConfig.services_title],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['app_title', cfg.app_title || defaultConfig.app_title],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['app_description', cfg.app_description || defaultConfig.app_description],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['cta_title', cfg.cta_title || defaultConfig.cta_title],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>['footer_text', cfg.footer_text || defaultConfig.footer_text],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>])</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== NAVIGATION ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function navigateTo(page) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('page-home').className = page === 'home' ? 'page-visible' : 'page-hidden';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('page-calculator').className = page === 'calculator' ? 'page-visible' : 'page-hidden';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('page-demo').className = page === 'demo' ? 'page-visible' : 'page-hidden';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('appRoot').scrollTop = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const nav = document.getElementById('mainNav');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (page === 'calculator' || page === 'demo') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav.style.display = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>lucide.createIcons();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleMobileMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const menu = document.getElementById('mobileMenu');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>menu.classList.toggle('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Navbar scroll effect</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('appRoot').addEventListener('scroll', function() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const nav = document.getElementById('mainNav');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (this.scrollTop &gt; 60) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav.style.background = 'rgba(234,88,12,0.97)';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav.style.boxShadow = '0 2px 16px rgba(0,0,0,0.15)';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav.style.background = 'transparent';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nav.style.boxShadow = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== FORM SUBMIT ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function handleFormSubmit(e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (allRecords.length &gt;= 999) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('limitWarning').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('Maximum 999 requests reached. Please delete some first.', 'warn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const btn = document.getElementById('submitBtn');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const btnText = document.getElementById('submitBtnText');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const loadingEl = document.getElementById('formLoading');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.style.opacity = '0.6';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btnText.textContent = 'Submitting...';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadingEl.classList.remove('hidden');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const data = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>client_name: document.getElementById('f_name').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>email: document.getElementById('f_email').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>phone: document.getElementById('f_phone').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>origin: document.getElementById('f_origin').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>destination: document.getElementById('f_destination').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>container_size: document.getElementById('f_size').value,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>container_type: document.getElementById('f_type').value,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>quantity: parseInt(document.getElementById('f_qty').value) || 1,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cargo_description: document.getElementById('f_cargo').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>status: 'Pending',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>submitted_at: new Date().toISOString()</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const result = await window.dataSdk.create(data);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.style.opacity = '1';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btnText.textContent = 'Submit Request';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadingEl.classList.add('hidden');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (result.isOk) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('freightForm').reset();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('Quote request submitted! We\'ll be in touch soon.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Open mailto to send notification</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sendEmailNotification(data);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('Something went wrong. Please try again.', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function sendEmailNotification(data) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const subject = encodeURIComponent(`New Freight Quote Request — ${data.client_name}`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const body = encodeURIComponent(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`New freight quote request from ContainerPrices.com:\n\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Name: ${data.client_name}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Email: ${data.email}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Phone: ${data.phone || 'N/A'}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Route: ${data.origin} → ${data.destination}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Container: ${data.quantity}x ${data.container_size} ${data.container_type}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Cargo: ${data.cargo_description || 'N/A'}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Submitted: ${new Date(data.submitted_at).toLocaleString()}\n`</p>
+<p class="p1"><span class="Apple-converted-space">      </span>);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.open(`mailto:containerprices.com@domainsbyproxy.com?subject=${subject}&amp;body=${body}`, '_blank');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== TABLE RENDER ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function renderTable(data) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tbody = document.getElementById('tableBody');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const emptyState = document.getElementById('emptyState');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tableWrapper = document.getElementById('tableWrapper');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const countEl = document.getElementById('recordCount');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>countEl.textContent = `${data.length} request${data.length !== 1 ? 's' : ''}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (data.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>emptyState.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tableWrapper.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>emptyState.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tableWrapper.classList.remove('hidden');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (data.length &gt;= 999) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('limitWarning').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('limitWarning').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Selective DOM update</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const existingRows = new Map([...tbody.querySelectorAll('tr[data-id]')].map(r =&gt; [r.dataset.id, r]));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const sorted = [...data].sort((a, b) =&gt; new Date(b.submitted_at) - new Date(a.submitted_at));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>sorted.forEach((rec, i) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const id = rec.__backendId;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (existingRows.has(id)) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>updateRow(existingRows.get(id), rec);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>existingRows.delete(id);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const row = createRow(rec);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (i &lt; tbody.children.length) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tbody.insertBefore(row, tbody.children[i]);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tbody.appendChild(row);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>existingRows.forEach(r =&gt; r.remove());</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function createRow(rec) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tr = document.createElement('tr');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tr.dataset.id = rec.__backendId;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tr.className = 'border-b border-gray-50 hover:bg-gray-50 transition';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateRowInner(tr, rec);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return tr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateRow(tr, rec) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tr.className = 'border-b border-gray-50 hover:bg-gray-50 transition';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateRowInner(tr, rec);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateRowInner(tr, rec) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const date = new Date(rec.submitted_at);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const dateStr = date.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tr.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3"&gt;&lt;div class="font-semibold text-gray-800 text-xs"&gt;${esc(rec.client_name)}&lt;/div&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3 text-xs text-gray-600"&gt;${esc(rec.origin)} → ${esc(rec.destination)}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3 text-xs text-gray-600"&gt;${esc(rec.container_size)} ${esc(rec.container_type)}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3 text-xs text-gray-600 font-semibold"&gt;${rec.quantity}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3"&gt;&lt;span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold ${rec.status === 'Pending' ? 'bg-yellow-50 text-yellow-600' : 'bg-green-50 text-green-600'}"&gt;${esc(rec.status)}&lt;/span&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3 text-xs text-gray-400"&gt;${dateStr}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;td class="py-3 px-3 text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="confirmDelete('${rec.__backendId}')" class="text-gray-300 hover:text-red-500 transition p-1" title="Delete"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i data-lucide="trash-2" class="w-4 h-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>lucide.createIcons();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== DEMO BOOKING ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function handleDemoSubmit(e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const btn = document.getElementById('demoBtnSubmit');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const btnText = document.getElementById('demoBtnText');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.style.opacity = '0.6';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btnText.textContent = 'Requesting...';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const data = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>name: document.getElementById('demo_name').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>email: document.getElementById('demo_email').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>phone: document.getElementById('demo_phone').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>company: document.getElementById('demo_company').value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>interest: document.getElementById('demo_interest').value,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message: document.getElementById('demo_message').value.trim()</p>
+<p class="p1"><span class="Apple-converted-space">      </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.style.opacity = '1';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btnText.textContent = 'Request Demo';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Send email notification</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const subject = encodeURIComponent(`Demo Request — ${data.name}`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const body = encodeURIComponent(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`New demo request from ContainerPrices.com:\n\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Name: ${data.name}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Email: ${data.email}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Phone: ${data.phone}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Company: ${data.company || 'N/A'}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Interest: ${data.interest}\n` +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`Message: ${data.message || 'N/A'}\n`</p>
+<p class="p1"><span class="Apple-converted-space">      </span>);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.open(`mailto:containerprices.com@domainsbyproxy.com?subject=${subject}&amp;body=${body}`, '_blank');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('demoForm').reset();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showToast('Demo request submitted! We\'ll be in touch soon.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== DELETE ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let pendingDeleteId = null;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function confirmDelete(id) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (pendingDeleteId === id) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>doDelete(id);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Reset previous</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.confirm-delete-row').forEach(r =&gt; r.classList.remove('confirm-delete-row'));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>pendingDeleteId = id;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const row = document.querySelector(`tr[data-id="${id}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (row) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>row.classList.add('confirm-delete-row');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const btn = row.querySelector('td:last-child button');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (btn) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>btn.innerHTML = '&lt;span class="text-red-500 text-[10px] font-bold"&gt;Confirm?&lt;/span&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Auto-reset after 3s</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (pendingDeleteId === id) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>pendingDeleteId = null;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const r = document.querySelector(`tr[data-id="${id}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (r) { r.classList.remove('confirm-delete-row'); }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>renderTable(allRecords);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}, 3000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function doDelete(id) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const rec = allRecords.find(r =&gt; r.__backendId === id);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!rec) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const row = document.querySelector(`tr[data-id="${id}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (row) row.style.opacity = '0.4';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const result = await window.dataSdk.delete(rec);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pendingDeleteId = null;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (result.isOk) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('Request deleted.', 'success');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showToast('Could not delete. Try again.', 'error');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (row) row.style.opacity = '1';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ==================== HELPERS ====================</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function esc(str) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!str) return '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const d = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>d.textContent = str;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return d.innerHTML;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showToast(msg, type) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const t = document.getElementById('toastMsg');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>t.textContent = msg;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>t.style.background = type === 'error' ? '#dc2626' : type === 'warn' ? '#d97706' : '#16a34a';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>t.classList.add('show');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; t.classList.remove('show'), 3200);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Init icons</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lucide.createIcons();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space"> </span>&lt;script&gt;(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e4f9b9823d88f37',t:'MTc3NDk2Mjc2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&amp;&amp;(document.onreadystatechange=e,c())}}}})();&lt;/script&gt;&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
